@@ -1,0 +1,398 @@
+/* General Styles */
+body {
+    /* background-color: #f0ebe5;
+    color: #343a40; */
+    font-family: 'Open Sans', sans-serif;
+}
+
+header,
+footer {
+    /* background-color: #343a40; */
+    /* color: #f0ebe5; */
+    padding: 2rem 1rem;
+    margin: 0;
+}
+
+button {
+    padding: 1rem;
+    border-radius: 4px;
+    /* background-color: #f0ebe5;
+    color: #343a40; */
+}
+
+nav.header-nav {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0;
+}
+
+h1 {
+    font-family: 'Vina Sans', sans-serif;
+    font-size: 3rem;
+    letter-spacing: 1.05rem;
+    text-align: center;
+    border-radius: 4px;
+    padding: 1rem 0.5rem;
+}
+
+h1 a {
+    /* color: #f0ebe5; */
+    text-decoration: none;
+    /* Border: 1px solid #343a40; */
+    
+}
+
+h1 a:hover {
+    text-decoration: underline;
+    /* Border: 1px solid #f0ebe5; */
+}
+
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: 'Poiret One', cursive;
+}
+
+/** Header Styles **/
+/*** Header Nav ***/
+.menu-menu-1-container {
+    width: 100%;
+}
+
+.menu {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+ul.menu li {
+    margin: 0.1rem 0.05rem;
+}
+
+ul.menu li a {
+    text-decoration: none;
+    padding: 0.25rem 0.5rem;
+    border-radius: 4px;
+}
+
+ul.menu li a:hover {
+    text-decoration: underline;
+    /* Border: 1px solid #f0ebe5; */
+}
+
+/** Main Styles **/
+/*** Carousel Styles ***/
+.owl-carousel {
+    margin-top: 1rem;
+}
+
+/* Style for Navigation Arrows */
+.owl-nav {
+    display: none;
+}
+
+.owl-carousel .owl-nav button {
+    position: absolute;
+    transform: translateY(-50%);
+    background: #333; /* Arrow background */
+    color: #ffffff64; /* Arrow color */
+    border: none;
+    border-radius: 50%;
+    padding: 10px;
+}
+
+.owl-carousel .owl-nav .owl-prev {
+    left: 45%; /* Position of left arrow */
+    bottom: -0.7rem;
+}
+
+.owl-carousel .owl-nav .owl-next {
+    right: 45%; /* Position of right arrow */
+    bottom: -0.7rem;
+}
+
+.owl-carousel .owl-dots {
+    display: flex;
+    justify-content: center;
+}
+
+/* Style for Dots */
+.owl-carousel .owl-dots .owl-dot {
+    background: #333; /* Dot color */
+    opacity: 0.6;
+    width: 10px; /* Dot size */
+    height: 10px; /* Dot size */
+    margin: 5px;
+    border-radius: 50%;
+}
+
+.owl-carousel .owl-dots .owl-dot.active {
+    opacity: 1;
+}
+
+/* end carousel styles */
+
+/**** Carousel Content Styles ****/
+.hero-banner {
+    height: 80vh;
+    width: 100%;
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.75rem;
+}
+
+.hero-text {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(0, 0, 0, 0.6);
+    padding: 0 2rem;
+    text-align: center;
+}
+
+
+/*** WP loop styles ***/
+.loop-container {
+    padding-top: 1rem;
+}
+
+/* end loop styles */
+
+/*** Sidebar Menu Left Styles ***/
+#sidebar-menu-left {
+    display: flex;
+    background-position: center;
+    background-size: cover;
+}
+
+.menu-left-overlay {
+    background-color: rgba(0, 0, 0, 0.6);
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    padding: 0 1rem;
+}
+
+.menu-left-overlay p {
+    margin-top: 0;
+}
+
+/*** Menus container styles ***/
+
+.menus nav {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+button.menu-button {
+    cursor: pointer;
+    padding: 0.5rem 1rem;
+    margin: 5px;
+    background-size: 210% 100%;
+    background-position: 99%;
+    transition: background-position 0.5s ease, color 0.5s ease;
+    border: none;
+    color: inherit;
+}
+
+button.menu-button:hover {
+    background-position: left bottom;
+}
+
+button.menu-button.active {
+    /* background-color: #457b9d;
+    color: #f0ebe5; */
+}
+
+button.menu-button.active:hover {
+    /* background-color: #457b9d;
+    color: #f0ebe5; */
+    transform: scale(1);
+    text-decoration: none;
+    cursor: default;
+}
+
+.menu-section {
+    display: none; /* Hide all sections by default */
+}
+
+.menu-section h3 {
+    text-align: center;
+}
+
+.menu-section.active {
+    display: block; /* Show the section with the active class */
+    width: 100%;
+    height: 80vh;
+    overflow: auto;
+    max-width: 85vw;
+}
+
+/* scroll bar styles */
+/* Styling the scrollbar for WebKit browsers (Chrome, Safari, Edge) */
+.menu-section.active::-webkit-scrollbar {
+    width: 0.5rem; /* width of the entire scrollbar */
+}
+
+.menu-section.active::-webkit-scrollbar-track {
+    background: #f1f1f1; /* color of the tracking area */
+}
+
+.menu-section.active::-webkit-scrollbar-thumb {
+    background-color: #888; /* color of the scroll thumb */
+    border-radius: 10px; /* roundness of the scroll thumb */
+    border: 3px solid #f1f1f1; /* creates padding around the scroll thumb */
+}
+
+/* Hover effect */
+.menu-section.active::-webkit-scrollbar-thumb:hover {
+    background: #555; /* color of the scroll thumb on hover */
+}
+
+/* Styling the scrollbar for Firefox */
+.menu-section.active {
+    scrollbar-width: thin; /* 'auto' or 'thin' */
+    scrollbar-color: #888 #f1f1f1; /* thumb and track color */
+}
+
+/* end scroll bar styles */
+
+.menu-section-posts {
+   display: grid;
+}
+
+.menus-container {
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: center;
+    align-items: center;
+    max-width: 100%;
+    margin-bottom: 1rem;
+}
+
+.menu-content {
+    margin-bottom: 1rem;
+}
+
+.menu-content h4 {
+    font-size: 1.5rem;
+    padding: 0;
+    margin: 0 0 0.25rem 0;
+}   
+
+.menu-content h5 {
+    font-size: 1.25rem;
+    padding: 0 0 0 1rem;
+    margin: 0;
+}
+
+.menu-content p {
+    font-size: 1rem;
+    padding: 0 1rem;
+    margin: 0.5rem 0 0.25rem 0;
+} 
+
+.footer-widget-iframe {
+    display: flex;
+    flex-direction: column;
+}
+
+.footer-widget-iframe iframe{
+    width: 100%;   /* Responsive width */
+    height: 500px; /* Fixed height */
+}
+
+.map-container{
+    max-width: 100%;
+}
+
+.social-copyright{
+    text-align: center;
+}
+
+.social-copyright small{
+    text-align: center;
+}
+
+.social-media-icons {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.social-media-icons i {
+    font-size: 2.5rem;
+    margin: 1rem;
+    color: white;
+}
+
+@media only screen and (min-width: 600px) {
+    /* Styles for small desktops */
+    .menu {
+        justify-content: right;
+    }
+    
+    ul.menu li a {
+        padding: 1rem;
+    }
+
+    nav.header-nav {
+        flex-direction: row;
+        padding: 0 2rem;
+    }
+
+    .menu-section-posts {
+        grid-template-columns: 1fr 1fr;
+        gap: 1rem;
+    }
+
+    .menu-sidebar-container {
+        display: grid;
+        grid-template-columns: 30% 70%;
+    }
+
+    #sidebar-menu-left {
+        margin: 1rem 1rem 1rem 0;
+    }
+
+    
+}
+
+@media only screen and (min-width: 1080px) {
+    /* Styles for small desktops */
+    header {
+        padding: 1rem 3rem;
+    }
+
+    .owl-nav {
+        display: block;
+    }
+
+    footer {
+        padding: 2rem 3rem;
+    }
+
+    .menu-section-posts {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+
+    .footer-widget-iframe {
+        display: grid;
+        grid-template-columns: 50% 50%;
+        gap: 2rem;
+    }
+
+}
